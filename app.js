@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 });
 dotenv.config()
 
-const port = server.listen(process.env.PORT|| 9023);
+const port = process.env.PORT|| 9023;
 // connections
 mongoose
   .connect(
@@ -136,6 +136,6 @@ app.post('/delete/:id', async (req, res) => {
 // cors headers
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 9023,LOCAL_ADDRESS='0.0.0.0', () => {
   console.log("listening to 9023");
 })
