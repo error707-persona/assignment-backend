@@ -3,8 +3,8 @@ const NotesModel = require('./models/dataModel');
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-// var cors = require('cors')
-// app.use(cors);
+var cors = require('cors')
+app.use(cors);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(function (req, res, next) {
@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 });
 dotenv.config()
 
-
+const port = process.env.PORT|| 9023
 // connections
 mongoose
   .connect(
