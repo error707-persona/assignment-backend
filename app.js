@@ -136,6 +136,6 @@ app.post('/delete/:id', async (req, res) => {
 // cors headers
 
 
-app.listen(process.env.PORT || 9023,LOCAL_ADDRESS='0.0.0.0', () => {
+app.listen(process.env.PORT || 9023, () => {
   console.log("listening to 9023");
 })
