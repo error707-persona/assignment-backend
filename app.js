@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 });
 dotenv.config()
 
-const port = process.env.PORT|| 9023
+const port = server.listen(process.env.PORT|| 9023);
 // connections
 mongoose
   .connect(
